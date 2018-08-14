@@ -1,0 +1,142 @@
+body{
+    display: flex;
+    background-color: lightskyblue;
+    justify-content: center; /* o box esta alinhado no centro*/
+    align-items: center; /* o conteudo dentro do box está alinhado no centro*/
+    margin: 0;
+    flex-direction: column;
+    overflow: scroll; /*referente a rolagem*/
+    height: 100vh; /* vh - view port, altura da tela - vw view width/ vh view heigh*/
+
+}
+
+h1{
+    
+    font-family: 'Fontdiner Swanky', cursive;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+
+
+}
+
+#animar{
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+}
+
+.item{
+    background: black;
+    height: 40px;
+    width: 45px;
+    animation: esticar 2s linear infinite;
+}
+
+
+
+.item:nth-child(1){
+    animation-delay: 0.0s;
+    background-color: rgb(255, 0, 0);
+
+}
+
+.item:nth-child(2){
+    animation-delay: 0.1s;
+    background-color: rgb(255, 94, 0);
+}
+
+.item:nth-child(3){
+    animation-delay: 0.2s;
+    background-color: rgb(255, 153, 0);
+
+}
+
+.item:nth-child(4){
+    animation-delay: 0.3s;
+    background-color: rgb(115, 255, 0);
+
+}
+
+.item:nth-child(5){
+    animation-delay: 0.4s;
+    background-color: rgb(9, 255, 0)
+
+}
+
+.item:nth-child(6){
+    animation-delay: 0.5s;
+    background-color: rgb(0, 255, 170)
+
+}
+
+.item:nth-child(7){
+    animation-delay: 0.6s;
+    background-color: rgb(0, 162, 255)
+
+}
+
+.item:nth-child(8){
+    animation-delay: 0.7s;
+    background-color: rgb(0, 4, 255)
+
+}
+
+.item:nth-child(9){
+    animation-delay: 0.8s;
+    background-color: rgb(132, 0, 255)
+
+}
+
+.item:nth-child(10){
+    animation-delay: 0.9s;
+    background-color: rgb(255, 0, 255)
+
+}
+
+@media(max-width: 600px){
+    #animar{
+        display: block;
+    }
+    .item{
+        position: absolute;
+        left: 50%;
+        height: 70px;
+        width: 12px;
+        animation-name: girar;
+        animation-duration: 2s;
+    }
+}
+
+
+@media(max-width: 300px){
+    #animar{
+        display: flex;
+    }
+    .item{
+        position: relative;
+        left: 50%;
+        height: 70px;
+        width: 12px;
+        animation-name: girar;
+        animation-duration: 2s;
+    }
+}
+
+@keyframes esticar{
+    0%{
+        transform: scaleY(1);
+    }70%{
+        transform: scaleY(1);
+        background-color: black;
+    }85%{
+        transform: scaleY(2);
+        /* background: violet; */
+    }100%{
+        transform: scaleY(1);
+        background-color: black;
+    }
+
+
+}
